@@ -1,0 +1,12 @@
+spring:
+  # 配置邮件信息
+  mail:
+    # 设置邮箱主机
+    host: smtp.qq.com
+    # 设置用户名
+    username:
+    password:
+    properties:
+      smtp:
+        auth: true
+        timeout: 25000

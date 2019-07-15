@@ -1,0 +1,24 @@
+server:
+    port: 8999
+
+#1:oms 2:cps 3:cls
+app:
+    type: 2
+
+spring:
+    profiles:
+        active: dev,cache-dev,oss-dev,sms-dev,mail-dev,mq-dev
+    jackson:
+        time-zone: GMT+8
+    data:
+        redis:
+            repositories:
+                enabled: false
+
+    #配置 Jpa
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        open-in-view: true
+

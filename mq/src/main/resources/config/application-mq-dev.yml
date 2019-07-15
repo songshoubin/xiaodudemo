@@ -1,0 +1,12 @@
+# failover:(tcp://localhost:61616,tcp://localhost:61617)
+# tcp://localhost:61616
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+    pool:
+      enabled: false
+      max-connections: 50
+    packages:
+      trust-all: true #不配置此项，会报错  http://activemq.apache.org/objectmessage.html
