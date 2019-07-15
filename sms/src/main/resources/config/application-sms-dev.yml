@@ -1,0 +1,5 @@
+#SMS配置
+aliyun:
+  sms:
+    accessKeyId: 你的AccessKeyID
+    accessKeySecret: 你的AccessKeySecret

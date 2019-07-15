@@ -11,6 +11,7 @@
         <module>mail</module>
         <module>api</module>
         <module>user</module>
+        <module>sms</module>
     </modules>
 
     <parent>
