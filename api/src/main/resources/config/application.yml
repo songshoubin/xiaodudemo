@@ -7,7 +7,7 @@ app:
 
 spring:
     profiles:
-        active: dev,cache-dev,oss-dev,sms-dev,mail-dev,mq-dev
+        active: dev,cache-dev,oss-dev,sms-dev,mail-dev,mq-dev,job-dev
     jackson:
         time-zone: GMT+8
     data:

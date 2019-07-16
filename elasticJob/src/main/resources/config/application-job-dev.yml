@@ -1,0 +1,5 @@
+
+elaticjob:
+  zookeeper:
+    server-lists: 10.137.1.38:2181
+    namespace: my-job

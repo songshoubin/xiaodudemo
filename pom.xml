@@ -12,6 +12,7 @@
         <module>api</module>
         <module>user</module>
         <module>sms</module>
+        <module>elasticJob</module>
     </modules>
 
     <parent>
