@@ -3,15 +3,25 @@ package com.xiaodu.elasticJob.job;
 import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.simple.SimpleJob;
 import com.dangdang.elasticjob.lite.annotation.ElasticSimpleJob;
+import com.xiaodu.user.dao.TestUserMapper;
+import com.xiaodu.user.model.TestUser;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
+ * 简单任务类
+ *
  * @author: songshoubin
  * @date: 2019-07-16
  */
-@ElasticSimpleJob(cron = "0/5 * * * * ?", jobName = "test123", shardingTotalCount = 2, jobParameter = "测试参数", shardingItemParameters = "0=A,1=B")
+@ElasticSimpleJob(cron = "0/5 * * * * ?", jobName = "test123", shardingTotalCount = 3, jobParameter = "测试参数", shardingItemParameters = "0=Beijing,1=Shanghai,2=Guangzhou")
 @Component
 public class Myjob implements SimpleJob {
+    @Autowired
+    TestUserMapper testUserMapper;
+
     @Override
     public void execute(ShardingContext shardingContext) {
         System.out.println(String.format("------Thread ID: %s, 任务总片数: %s, " +
@@ -23,5 +33,11 @@ public class Myjob implements SimpleJob {
                 shardingContext.getShardingParameter(),
                 shardingContext.getJobName(),
                 shardingContext.getJobParameter()));
+        List<TestUser> testUserList = testUserMapper.findUser(shardingContext.getShardingTotalCount(),shardingContext.getShardingItem());
+        if(testUserList != null)
+            for (TestUser testUser:testUserList
+                 ) {
+                System.out.println(testUser.toString());
+            }
     }
 }

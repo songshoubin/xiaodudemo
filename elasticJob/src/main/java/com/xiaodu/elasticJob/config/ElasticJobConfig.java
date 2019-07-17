@@ -14,20 +14,21 @@ import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperConfiguration;
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperRegistryCenter;
 
 /**
+ * 任务配置类
+ *
  * @author: songshoubin
  * @date: 2019-07-16
  */
 @Slf4j
 @Configuration
 public class ElasticJobConfig {
-   /* @Value("${elaticjob.zookeeper.server-lists")
-    private  String serverList;
-
-    @Value("${elaticjob.zookeeper.namespace")
-    private String namespace;*/
-
-
-
+    /**
+     * 配置注册中心
+     *
+     * @param serverList
+     * @param namespace
+     * @return
+     */
     @Bean(initMethod = "init")
     public ZookeeperRegistryCenter regCenter(@Value("${elaticjob.zookeeper.server-lists}") final String serverList, @Value("${elaticjob.zookeeper.namespace}") final String namespace) {
         return new ZookeeperRegistryCenter(new ZookeeperConfiguration(serverList, namespace));

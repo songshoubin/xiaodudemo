@@ -19,10 +19,15 @@ public class ElasticJobController {
     @Autowired
     private ElasticJobConfig elasticJobConfig;
 
+    /**
+     * 动态添加任务(参数包括：任务类，cron，分片总数，分片项）
+     *
+     * @return
+     */
     @PostMapping("/addjob")
     public ResponseEntity addJob(){
-        int shardingTotalCount = 2;
-        elasticJobConfig.addSimpleJobScheduler(new Myjob().getClass(),"* * * * * ?",shardingTotalCount,"0=xxx,1=hhh");
+        int shardingTotalCount = 3;
+        elasticJobConfig.addSimpleJobScheduler(new Myjob().getClass(),"* * * * * ?",shardingTotalCount,"0=Beijing,1=Shanghai,2=Guangzhou");
         return new ResponseEntity(HttpStatus.OK);
     }
 }
