@@ -16,8 +16,8 @@ import java.util.List;
  * @author: songshoubin
  * @date: 2019-07-16
  */
-@ElasticSimpleJob(cron = "0/5 * * * * ?", jobName = "test123", shardingTotalCount = 3, jobParameter = "测试参数", shardingItemParameters = "0=Beijing,1=Shanghai,2=Guangzhou")
-@Component
+//@ElasticSimpleJob(cron = "0/5 * * * * ?", jobName = "test123", shardingTotalCount = 3, jobParameter = "测试参数", shardingItemParameters = "0=Beijing,1=Shanghai,2=Guangzhou")
+//@Component
 public class Myjob implements SimpleJob {
     @Autowired
     TestUserMapper testUserMapper;

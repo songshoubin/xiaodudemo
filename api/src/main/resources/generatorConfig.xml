@@ -26,8 +26,8 @@
 
         <!-- 实体类生成的位置 -->
         <javaModelGenerator
-                targetPackage="com.xiaodu.user.model"
-                targetProject="F:\xiaodudemo\user\src\main\java">
+                targetPackage="com.xiaodu.elasticJob.model"
+                targetProject="F:\xiaodudemo\elasticJob\src\main\java">
             <property name="enableSubPackages" value="false"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
@@ -35,20 +35,20 @@
         <!-- *Mapper.xml 文件的位置  sqlMapGenerator-->
         <sqlMapGenerator
                 targetPackage="mapper"
-                targetProject="F:\xiaodudemo\user\src\main\resources">
+                targetProject="F:\xiaodudemo\elasticjob\src\main\resources">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
         <!-- Mapper 接口文件的位置 -->
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="com.xiaodu.user.dao"
-                             targetProject="F:\xiaodudemo\user\src\main\java">
+                             targetPackage="com.xiaodu.elasticJob.dao"
+                             targetProject="F:\xiaodudemo\elasticjob\src\main\java">
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
         <!-- 相关表的配置 -->
         <!--将example类型设为false，否则实体类里面会多一个example的类exampleStudent -->
         <!--表明为数据库的表明，生成实体类Student，会自动生成到entity的目录中-->
-        <table tableName="test_user" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
+        <table tableName="task_job" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"></table>
     </context>
 </generatorConfiguration>

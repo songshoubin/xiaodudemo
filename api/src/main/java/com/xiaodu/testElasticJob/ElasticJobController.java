@@ -26,8 +26,8 @@ public class ElasticJobController {
      */
     @PostMapping("/addjob")
     public ResponseEntity addJob(){
-        int shardingTotalCount = 3;
-        elasticJobConfig.addSimpleJobScheduler(new Myjob().getClass(),"* * * * * ?",shardingTotalCount,"0=Beijing,1=Shanghai,2=Guangzhou");
+//        int shardingTotalCount = 3;
+//        elasticJobConfig.addSimpleJobScheduler(new Myjob().getClass(),"* * * * * ?",shardingTotalCount,"0=Beijing,1=Shanghai,2=Guangzhou");
         return new ResponseEntity(HttpStatus.OK);
     }
 }

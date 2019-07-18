@@ -42,8 +42,12 @@
             <scope>compile</scope>
         </dependency>
 
-    </dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+        </dependency>
 
+    </dependencies>
 
 
 
