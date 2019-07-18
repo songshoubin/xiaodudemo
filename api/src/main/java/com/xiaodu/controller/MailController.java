@@ -1,4 +1,4 @@
-package com.xiaodu.testmail;
+package com.xiaodu.controller;
 
 import com.xiaodu.user.model.TestUser;
 import com.xiaodu.user.service.UserService;
@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.jms.Queue;
 
 /**
  * 邮件发送接口
