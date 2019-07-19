@@ -1,7 +1,7 @@
 package com.xiaodu;
 
-import com.xiaodu.elasticJob.dao.TaskJobMapper;
-import com.xiaodu.elasticJob.service.ElasticJobService;
+import com.xiaodu.dao.ElaJobMapper;
+import com.xiaodu.dao.TestUserMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,11 +18,13 @@ import javax.annotation.Resource;
 @SpringBootApplication
 @EnableTransactionManagement
 public class ApplicationRun implements CommandLineRunner {
-//    @Resource
-//    private ElasticJobService elasticJobService;
 
-//    @Resource
-//    private TaskJobMapper taskJobMapper;
+
+    @Resource
+    private TestUserMapper testUserMapper;
+
+    @Resource
+    private ElaJobMapper elaJobMapper;
 
     public static void main(String[] args) {
         SpringApplication.run(ApplicationRun.class, args);
@@ -32,5 +34,7 @@ public class ApplicationRun implements CommandLineRunner {
     public void run(String... args) throws Exception {
 //        elasticJobService.scanAddJob();
 //        taskJobMapper.selectByPrimaryKey(1L);
+        System.out.println(elaJobMapper.selectByPrimaryKey(1L).toString());
+        System.out.println(testUserMapper.selectByPrimaryKey(1).toString());
     }
 }

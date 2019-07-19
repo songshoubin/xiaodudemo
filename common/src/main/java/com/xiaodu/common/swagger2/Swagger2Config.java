@@ -1,4 +1,4 @@
-package com.xiaodu.common.Swagger2;
+package com.xiaodu.common.swagger2;
 
 import com.google.common.base.Predicates;
 import org.springframework.context.annotation.Bean;
@@ -54,7 +54,7 @@ public class Swagger2Config {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("小度api文档")
-                .description("restfun风格，https://blog.csdn.net/songshoubin/article/details/95249753")
+                .description("restfun风格，http://localhost:8999/v2/api-docs")
                 .version("1.0")
                 .build();
     }

@@ -1,7 +1,7 @@
 package com.xiaodu.controller;
 
-import com.xiaodu.user.model.TestUser;
-import com.xiaodu.user.service.UserService;
+import com.xiaodu.model.TestUser;
+import com.xiaodu.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -60,4 +60,4 @@ jwt:
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.xiaodu.user.model
+  type-aliases-package: com.xiaodu.model
